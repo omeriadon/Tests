@@ -5,7 +5,6 @@ import type React from "react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { twMerge } from "tailwind-merge";
 
-
 export function cn(...inputs: ClassValue[]) {
 return twMerge(clsx(inputs));
 }
@@ -195,20 +194,20 @@ squareSize: number;
 gridGap: number;
 }
 
-const svgDataUrlForEffect: string | null = `data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBVcGxvYWRlZCB0bzogU1ZHIFJlcG8sIHd3dy5zdmdyZXBvLmNvbSwgR2VuZXJhdG9yOiBTVkcgUmVwbyBNaXhlciBUb29scyAtLT4NCjxzdmcgZmlsbD0iIzAwMDAwMCIgaGVpZ2h0PSI4MDBweCIgd2lkdGg9IjgwMHB4IiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIA0KCSB2aWV3Qm94PSIwIDAgMjIuNzczIDIyLjc3MyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8Zz4NCgkJPHBhdGggZD0iTTE1Ljc2OSwwYzAuMDUzLDAsMC4xMDYsMCwwLjE2MiwwYzAuMTMsMS42MDYtMC40ODMsMi44MDYtMS4yMjgsMy42NzVjLTAuNzMxLDAuODYzLTEuNzMyLDEuNy0zLjM1MSwxLjU3Mw0KCQkJYy0wLjEwOC0xLjU4MywwLjUwNi0yLjY5NCwxLjI1LTMuNTYxQzEzLjI5MiwwLjg3OSwxNC41NTcsMC4xNiwxNS43NjksMHoiLz4NCgkJPHBhdGggZD0iTTIwLjY3LDE2LjcxNmMwLDAuMDE2LDAsMC4wMywwLDAuMDQ1Yy0wLjQ1NSwxLjM3OC0xLjEwNCwyLjU1OS0xLjg5NiwzLjY1NWMtMC43MjMsMC45OTUtMS42MDksMi4zMzQtMy4xOTEsMi4zMzQNCgkJCWMtMS4zNjcsMC0yLjI3NS0wLjg3OS0zLjY3Ni0wLjkwM2MtMS40ODItMC4wMjQtMi4yOTcsMC43MzUtMy42NTIsMC45MjZjLTAuMTU1LDAtMC4zMSwwLTAuNDYyLDANCgkJCWMtMC45OTUtMC4xNDQtMS43OTgtMC45MzItMi4zODMtMS42NDJjLTEuNzI1LTIuMDk4LTMuMDU4LTQuODA4LTMuMzA2LTguMjc2YzAtMC4zNCwwLTAuNjc5LDAtMS4wMTkNCgkJCWMwLjEwNS0yLjQ4MiwxLjMxMS00LjUsMi45MTQtNS40NzhjMC44NDYtMC41MiwyLjAwOS0wLjk2MywzLjMwNC0wLjc2NWMwLjU1NSwwLjA4NiwxLjEyMiwwLjI3NiwxLjYxOSwwLjQ2NA0KCQkJYzAuNDcxLDAuMTgxLDEuMDYsMC41MDIsMS42MTgsMC40ODVjMC4zNzgtMC4wMTEsMC43NTQtMC4yMDgsMS4xMzUtMC4zNDdjMS4xMTYtMC40MDMsMi4yMS0wLjg2NSwzLjY1Mi0wLjY0OA0KCQkJYzEuNzMzLDAuMjYyLDIuOTYzLDEuMDMyLDMuNzIzLDIuMjJjLTEuNDY2LDAuOTMzLTIuNjI1LDIuMzM5LTIuNDI3LDQuNzRDMTcuODE4LDE0LjY4OCwxOS4wODYsMTUuOTY0LDIwLjY3LDE2LjcxNnoiLz4NCgk8L2c+DQoJPGc+DQoJPC9nPg0KCTxnPg0KCTwvZz4NCgk8Zz4NCgk8L2c+DQoJPGc+DQoJPC9nPg0KCTxnPg0KCTwvZz4NCgk8Zz4NCgk8L2c+DQoJPGc+DQoJPC9nPg0KCTxnPg0KCTwvZz4NCgk8Zz4NCgk8L2c+DQoJPGc+DQoJPC9nPg0KCTxnPg0KCTwvZz4NCgk8Zz4NCgk8L2c+DQoJPGc+DQoJPC9nPg0KCTxnPg0KCTwvZz4NCgk8Zz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4=`;
+const svgDataUrlForEffect: string | null = `data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBVcGxvYWRlZCB0bzogU1ZHIFJlcG8sIHd3dy5zdmdyZXBvLmNvbSwgR2VuZXJhdG9yOiBTVkcgUmVwbyBNaXhlciBUb29scyAtLT4NCjxzdmcgZmlsbD0iIzAwMDAwMCIgaGVpZ2h0PSI4MDBweCIgd2lkdGg9IjgwMHB4IiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIA0KCSB2aWV3Qm94PSIwIDAgMjIuNzczIDIyLjc3MyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgkNCjwvZz4NCjwvc3ZnPg==`;
 const svgMaskGridSettingsForEffect: GeneratedGridSettings = {
-  "color": "#ffffff",
-  "maxOpacity": 1,
-  "flickerChance": 0.53,
+  "color": "#FF5F1F",
+  "maxOpacity": 0.75,
+  "flickerChance": 0.18,
   "squareSize": 3,
   "gridGap": 4
 };
 const backgroundGridSettingsForEffect: GeneratedGridSettings = {
   "color": "#ffffff",
-  "maxOpacity": 0.1,
-  "flickerChance": 0.06,
+  "maxOpacity": 0.69,
+  "flickerChance": 0.17,
   "squareSize": 3,
-  "gridGap": 4
+  "gridGap": 3
 };
 
 const GeneratedFlickerEffect = () => {
