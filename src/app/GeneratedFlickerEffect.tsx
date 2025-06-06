@@ -204,8 +204,8 @@ const svgMaskGridSettingsForEffect: GeneratedGridSettings = {
 };
 const backgroundGridSettingsForEffect: GeneratedGridSettings = {
   "color": "#ffffff",
-  "maxOpacity": 0.69,
-  "flickerChance": 0.17,
+  "maxOpacity": 0.32,
+  "flickerChance": 0.01,
   "squareSize": 3,
   "gridGap": 3
 };
