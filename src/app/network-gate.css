@@ -1,0 +1,60 @@
+.network-blocked {
+  filter: blur(2px) saturate(.55);
+  pointer-events: none;
+  user-select: none;
+}
+
+.network-gate {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(7, 6, 5, .72);
+  backdrop-filter: blur(12px);
+}
+
+.network-gate-card {
+  width: min(520px, 100%);
+  padding: 28px;
+  border: 1px solid rgba(248, 242, 231, .14);
+  border-radius: 20px;
+  background: #15130f;
+  box-shadow: 0 28px 90px rgba(0, 0, 0, .48);
+}
+
+.network-gate-card h2 {
+  margin: 8px 0 12px;
+  font-size: 28px;
+  letter-spacing: -.045em;
+}
+
+.network-gate-card p {
+  margin: 0 0 20px;
+  color: #a69e92;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.network-gate-card .notice {
+  margin: 0 0 18px;
+}
+
+.network-gate-card > small {
+  display: block;
+  margin-top: 16px;
+  color: #6e685f;
+  font: 500 9px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace;
+  overflow-wrap: anywhere;
+}
+
+.network-gate-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.network-switch-button {
+  min-height: 44px;
+}
