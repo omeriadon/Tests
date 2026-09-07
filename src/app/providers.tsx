@@ -10,6 +10,7 @@ import {
 import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
 import { NightlyWalletAdapter } from "@solana/wallet-adapter-nightly";
 import { COOKIE_RPC, COOKIE_WSS } from "@/lib/cookie-chain";
+import "./network-gate.css";
 
 type NightlySolana = {
   genesisHash?: string;
@@ -89,7 +90,7 @@ function NetworkGate({ children }: { children: React.ReactNode }) {
 
   return (
     <>
-      <div aria-hidden={blocked ? undefined : true} className={blocked ? "network-blocked" : undefined}>
+      <div aria-hidden={blocked ? true : undefined} className={blocked ? "network-blocked" : undefined}>
         {children}
       </div>
       {blocked && (
