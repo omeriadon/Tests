@@ -1,0 +1,39 @@
+> mermail-github-intake@1.0.0 demo
+> node scripts/demo.mjs
+
+Mermail GitHub Intake — deterministic safety demo
+===================================================
+source: thread_demo_001/msg_demo_001
+trust: inbound message treated as untrusted data
+redaction: secret removed
+injection: embedded instruction ignored
+duplicates searched: 2
+duplicate result: none above threshold
+
+EXACT EFFECT PREVIEW
+--------------------
+repository: example/acme
+title: Dashboard crashes when an empty project is opened
+## Summary
+Dashboard crashes when an empty project is opened
+
+## Observed behavior
+Opening a project with no tasks makes the dashboard show a blank screen. The browser console says TypeError: Cannot read properties of undefined (reading 'map').
+
+## Expected behavior
+An empty project should show the empty-state card.
+
+## Reproduction steps
+1. Create a project.
+2. Do not add any tasks.
+3. Open Dashboard.
+
+## Environment
+Chrome 152 on macOS 27.
+
+---
+Source: Mermail thread `thread_demo_001`, message `msg_demo_001`.
+
+> Reporter address intentionally omitted. Potential secrets and embedded instructions were not copied into this draft.
+
+STATE: draft_ready — no GitHub write performed; fresh approval required.
