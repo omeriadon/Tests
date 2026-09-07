@@ -1,15 +1,5 @@
-import GeneratedFlickerEffect from "./GeneratedFlickerEffect";
-import { Analytics } from "@vercel/analytics/next";
-
+import { OvenBench } from "./OvenBench";
 
 export default function Home() {
-  return (
-    <div className="">
-            <GeneratedFlickerEffect />
- <Analytics />
-    </div>
-
-  );
+  return <OvenBench />;
 }
-
-
