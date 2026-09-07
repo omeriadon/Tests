@@ -2,11 +2,15 @@
 
 OvenBench is a wallet-connected transaction benchmark for [Cookie Chain](https://www.cookiechain.wtf), an SVM-compatible network.
 
-It measures **broadcast → confirmed latency using real signed transactions**, then links every sample to its Cookiescan receipt. The wallet-signing step is intentionally completed before timing begins so the result reflects the network/RPC path rather than user reaction time.
+**Live app:** https://tests-git-cookiechain-ovenbench-omeriadons-projects.vercel.app
+
+It measures **broadcast → confirmed latency using real signed transactions**, then links every sample to its Cookiescan receipt. Wallet signing is completed before timing begins so the benchmark measures the browser/RPC/network path rather than user reaction time.
 
 ## What it demonstrates
 
 - Nightly wallet connection
+- Cookie Chain genesis/network verification before signing
+- User-approved Nightly network switching when required
 - Connected wallet address and COOK balance
 - Real Cookie Chain transactions through `https://rpc.cookiescan.io`
 - Explicit confirmation and failure handling
@@ -36,7 +40,7 @@ npm install
 npm run dev
 ```
 
-Open `http://localhost:3000`, configure Nightly for Cookie Chain using the official RPC, connect, and run a benchmark.
+Open `http://localhost:3000`, connect Nightly, approve a Cookie Chain network switch if prompted, and run a benchmark.
 
 ## Benchmark method
 
@@ -54,20 +58,27 @@ The measurement includes browser ↔ RPC latency and therefore is not a protocol
 
 - [x] Web application on Cookie Chain
 - [x] Nightly wallet support
+- [x] Cookie Chain network verification / switch guard
 - [x] Wallet address display
 - [x] On-chain transaction execution
 - [x] Transaction confirmation handling
 - [x] Error handling and live feedback
 - [x] Application-specific activity and benchmark history
 - [x] Analytics / dashboard metrics
-- [x] Open-source source code
-- [x] Public deployment (Vercel preview during development)
+- [x] Open-source source code with MIT license
+- [x] Public Vercel deployment
 - [x] Comprehensive setup documentation
 
 ## Safety
 
 OvenBench never requests a seed phrase or private key. Transactions are built client-side and sent only after the connected wallet signs them. The benchmark memo contains a random session id, run number, timestamp, app identifier, and version; it does not contain personal data.
 
+## Source
+
+The submission source currently lives on the public `cookiechain-ovenbench` branch of this repository:
+
+https://github.com/omeriadon/Tests/tree/cookiechain-ovenbench
+
 ## Submission
 
-Built for the Superteam Earn **Create an App on Cookie Chain** bounty. See `SUBMISSION.md` for the final listing copy and demo checklist.
+Built for the Superteam Earn **Create an App on Cookie Chain** bounty. See `SUBMISSION.md` for the final listing copy and verification checklist.
